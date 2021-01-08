@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+.container-header {
+  background: url(../images/desktop/image-hero.jpg);
+  background-size: cover;
+  height: 500px;
+  padding: 40px 100px;
+  color: #fff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header > ul {
+  display: flex;
+}
+.header > ul li {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.info-header {
+  margin-top: 70px;
+  padding: 30px;
+  border: 1px solid #fff;
+  width: max-content;
+}
+.info-header p {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.main {
+  height: 100vh;
+  padding: 100px 100px;
+  position: relative;
+  display: flex;
+}
+.main > img {
+  position: absolute;
+}
+.main-info {
+  position: absolute;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 50px;
+  align-self: flex-end;
+  right: 100px;
+}
+.main-info h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.main-info p {
+  margin-top: 10px;
+}
+.creations {
+  padding: 0px 100px 100px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.creations button {
+  background: white;
+  border: 1px solid hsl(0, 0%, 55%);
+  padding: 0 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.creations button:hover {
+  background: black;
+  color: #fff;
+}
+.cards {
+  padding: 0px 100px 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards > span {
+  margin: 10px;
+}
+
+.cards > span > h2 {
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.footer {
+  background: hsl(0, 0%, 0%);
+  color: #fff;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer ul {
+  display: flex;
+}
+.footer ul li {
+  margin-left: 10px;
+}
