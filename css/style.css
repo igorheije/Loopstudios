@@ -32,7 +32,9 @@ body {
   color: #fff;
   position: relative;
 }
-
+.header > ul a:hover {
+  color: hsl(0, 0%, 41%);
+}
 .header > ul a:hover::before {
   content: '';
   position: absolute;
@@ -40,7 +42,7 @@ body {
   top: 0;
   right: 35%;
   left: 35%;
-  border-bottom: 4px #fff solid;
+  border-bottom: 4px hsl(0, 0%, 55%) solid;
 }
 
 .info-header {
@@ -64,6 +66,7 @@ body {
   flex-wrap: wrap;
 }
 .main > img {
+  opacity: 0;
   position: absolute;
 }
 .main-info {
@@ -98,11 +101,12 @@ body {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  flex-wrap: wrap;
 }
 .creations button {
   background: white;
   border: 1px solid hsl(0, 0%, 55%);
-  padding: 0 30px;
+  padding: 10px 30px;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.5s;
@@ -126,6 +130,7 @@ body {
   align-items: flex-end;
   margin-bottom: 20px;
   cursor: pointer;
+  opacity: 0;
 }
 
 .card > img:hover {
@@ -155,4 +160,53 @@ body {
 }
 .footer ul li {
   margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 10px;
+}
+.footer ul li:hover {
+  color: hsl(0, 0%, 55%);
+}
+.footer ul li:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 35%;
+  left: 35%;
+  border-bottom: 4px hsl(0, 0%, 55%) solid;
+}
+
+.esquerda {
+  opacity: 1;
+  animation: reveal 1.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.direita {
+  opacity: 1;
+  animation: treveal 1.5s ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes treveal {
+  0% {
+    opacity: 0;
+    transform: translateX(+20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
