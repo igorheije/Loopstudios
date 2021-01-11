@@ -48,9 +48,24 @@ body {
 
 .info-header {
   margin-top: 70px;
-  padding: 30px;
+  padding: 20px;
   border: 1px solid #fff;
-  width: max-content;
+  width: 100%;
+  opacity: 1;
+  animation: title-header 3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes title-header {
+  0% {
+    opacity: 0;
+    transform: translateX(+20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .info-header h1 {
   font-size: 3rem;
@@ -256,12 +271,12 @@ body {
     padding: 10px;
   }
   .card img {
-    width: 400px;
+    width: 350px;
   }
   .container-header {
-    padding: 10px;
+    padding: 30px 10px;
   }
-  .header {
+  .header ul {
     display: none;
   }
   .footer {
