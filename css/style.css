@@ -92,14 +92,7 @@ body {
   align-self: flex-end;
   right: 100px;
 }
-@media (max-width: 768px) {
-  .main-info {
-    position: relative;
-  }
-  .main > img {
-    position: relative;
-  }
-}
+
 .main-info h1 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -162,12 +155,12 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
 }
-/* .cards-mobile .card img {
+.cards-mobile .card img {
   width: 100%;
-} */
+}
 .cards-mobile .card {
   position: relative;
-  width: 256px;
+  width: 100%;
   display: flex;
   align-items: flex-end;
   margin-bottom: 20px;
@@ -178,7 +171,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 100%;
 }
 .cards-mobile > div > h2 {
   position: absolute;
@@ -199,16 +191,15 @@ body {
   background: hsl(0, 0%, 0%);
   color: #fff;
   padding: 20px 100px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
 }
 .footer ul {
   display: flex;
 }
 .footer ul li {
-  margin-left: 10px;
+  margin: 10px 10px 10px 0px;
   cursor: pointer;
   position: relative;
   padding-bottom: 10px;
@@ -224,6 +215,17 @@ body {
   right: 35%;
   left: 35%;
   border-bottom: 4px hsl(0, 0%, 55%) solid;
+}
+.footer span {
+  margin: 10px 10px 10px 0px;
+  justify-self: end;
+  flex-wrap: wrap;
+}
+.sociais {
+  justify-self: end;
+}
+.sociais a + a {
+  margin-left: 20px;
 }
 
 .esquerda {
@@ -260,7 +262,7 @@ body {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .cards-desktop {
     display: none;
   }
@@ -270,9 +272,7 @@ body {
   .container {
     padding: 10px;
   }
-  .card img {
-    width: 350px;
-  }
+
   .container-header {
     padding: 30px 10px;
   }
@@ -282,9 +282,45 @@ body {
   .footer {
     padding: 10px;
   }
+  .main-info {
+    right: 0px;
+    padding: 10px;
+  }
+
+  .creations {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .footer ul {
+    display: block;
+  }
+  .footer span {
+    max-width: 100%;
+  }
 }
-@media (min-width: 500px) {
+@media (min-width: 550px) {
   .cards-mobile {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-info {
+    position: relative;
+  }
+  .main > img {
+    position: relative;
+    width: 100%;
+  }
+  .footer {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .footer span,
+  .footer ul,
+  .footer h2,
+  .sociais {
+    justify-self: center;
+    margin: 10px;
   }
 }
