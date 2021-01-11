@@ -25,6 +25,9 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.header button {
+  display: none;
+}
 .header > ul {
   display: flex;
 }
@@ -277,8 +280,39 @@ body {
     padding: 30px 10px;
   }
   .header ul {
+    padding: 20px;
+    position: absolute;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    right: 10px;
+    background: #000;
+    z-index: 20;
+    box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.3);
   }
+  .header button {
+    align-self: flex-end;
+    position: absolute;
+    z-index: 21;
+    right: 30px;
+  }
+  .header button i {
+    width: 24px;
+    color: #fff;
+  }
+  .modal-item {
+    padding: 10px;
+  }
+  .header button {
+    padding: 5px;
+    background: transparent;
+    border: none;
+    display: block;
+    outline: none;
+    right: 10px;
+  }
+
   .footer {
     padding: 10px;
   }

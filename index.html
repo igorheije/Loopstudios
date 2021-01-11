@@ -13,17 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   <title>Loopstudios landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
@@ -31,20 +20,21 @@
   <div class="container-header">
     <header class="header">
       <h1>loopstudios</h1>
-      <ul>
-        <a href="#">
+      <button id="modal" onclick="mobile()"><img id="modal-img" src="./images/icon-hamburger.svg"></button>
+      <ul id="ul">
+        <a class="modal-item" href="#">
           <li>About</li>
         </a>
-        <a href="#">
+        <a class="modal-item" href="#">
           <li>Careers</li>
         </a>
-        <a href="#">
+        <a class="modal-item" href="#">
           <li>Events</li>
         </a>
-        <a href="#products">
+        <a class="modal-item" href="#products">
           <li>Products</li>
         </a>
-        <a href="#">
+        <a class="modal-item" href="#">
           <li>Support</li>
         </a>
       </ul>
@@ -147,7 +137,7 @@
       <li>Products</li>
       <li>Support</li>
     </ul>
-    <span>Heije© 2021 Loopstudios.
+    <span>Heijes© 2021 Loopstudios.
       All rights reserved.
     </span>
   </footer>

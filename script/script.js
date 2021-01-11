@@ -1,7 +1,9 @@
 const img = document.querySelector('.main-img')
 const info = document.querySelector('.main-info')
 const card = document.querySelectorAll('.card')
-
+const modal = document.querySelector('#modal')
+const ul = document.querySelector('#ul')
+const modalItem = document.getElementsByClassName('modal-item')
 
 const getWindowBottom = () => {
     const teste = window.scrollY + window.innerHeight
@@ -18,6 +20,20 @@ const getWindowBottom = () => {
             }
         }
     })
+}
+const windowWidth = window.innerWidth;
+function mobile(){
+    if(windowWidth<550){
+        if(modal.classList.value==='active'){
+            modal.classList.remove('active')
+            document.getElementById('modal-img').src = "./images/icon-hamburger.svg"
+            ul.style.display = 'none'
+        }else{
+            modal.classList.add('active')
+            document.getElementById('modal-img').src = "./images/icon-close.svg"
+            ul.style.display = 'flex'
+        }
+    }
 }
 
 document.addEventListener('scroll',getWindowBottom)
